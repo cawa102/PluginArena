@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "title": "Plugin Arena - Claude Code Plugin Rankings",
+    "description": "Ranking site for Claude Code plugins (MCP/skills/hooks/commands). Find the best plugins through community voting."
+  },
+  "nav": {
+    "ranking": "Ranking",
+    "vote": "Vote",
+    "howItWorks": "How it Works"
+  },
+  "footer": {
+    "text": "Plugin Arena - Community ranking for the Claude Code ecosystem"
+  },
+  "home": {
+    "title": "Claude Code Plugin Rankings",
+    "subtitle1": "Ratings and rankings for MCP / Skills / Hooks / Commands.",
+    "subtitle2": "Find the best plugins through community voting.",
+    "cta": "Start Voting"
+  },
+  "vote": {
+    "title": "Plugin Voting",
+    "description": "Compare plugins you have used and vote for the better one. Your votes are reflected in the rankings.",
+    "todayVotes": "Today's votes: {count}",
+    "whichBetter": "Which is better?",
+    "criteriaHint": "Pick the one you would actually use",
+    "selected": "You selected {name}!",
+    "skip": "Skip",
+    "bothUnknown": "I don't know either",
+    "skipKey": "[S]",
+    "keyLeft": "Key: 1 or \u2190",
+    "keyRight": "Key: 2 or \u2192",
+    "note1": "You can only vote once per pair every 24 hours.",
+    "note2": "Skip plugins you haven't used.",
+    "keyboardHint": "Keyboard shortcuts: [1] or [\u2190] to select left, [2] or [\u2192] to select right, [S] to skip",
+    "loading": "Loading",
+    "preparing": "Preparing plugins...",
+    "retry": "Retry",
+    "noPlugins": "No plugins available for voting",
+    "errorFetchPair": "Failed to fetch voting pair",
+    "errorVote": "Failed to vote",
+    "voteFor": "Vote for {name}",
+    "exitFocusMode": "Exit Challenge Mode"
+  },
+  "ranking": {
+    "tabs": {
+      "now": "Best",
+      "nowDesc": "Overall rating by ELO + Stars",
+      "trend": "Rising",
+      "trendDesc": "Hot in the last 60 days",
+      "classic": "All-Time",
+      "classicDesc": "Ranked by total Stars"
+    },
+    "prev": "Previous",
+    "next": "Next",
+    "errorFetch": "Failed to fetch plugins",
+    "noPlugins": "No plugins found"
+  },
+  "plugin": {
+    "rank": "Rank #{rank}",
+    "score": "Score",
+    "votes": "Votes",
+    "confidence": "Confidence: {level}",
+    "confidenceHigh": "High",
+    "confidenceMedium": "Medium",
+    "confidenceLow": "Low",
+    "updated": "Updated: {date}",
+    "openGithub": "Open {name}'s GitHub repository",
+    "voteFor": "Vote for {name}",
+    "voteButton": "Vote"
+  },
+  "category": {
+    "all": "All",
+    "filter": "Category filter"
+  },
+  "comments": {
+    "button": "Comments",
+    "title": "Comments ({count})",
+    "close": "Close",
+    "loading": "Loading...",
+    "empty": "No comments",
+    "placeholder": "Add a comment...",
+    "submit": "Post",
+    "errorFetch": "Failed to fetch comments",
+    "errorPost": "Failed to post comment"
+  },
+  "time": {
+    "justNow": "Just now",
+    "minutesAgo": "{minutes}m ago",
+    "hoursAgo": "{hours}h ago",
+    "daysAgo": "{days}d ago",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "daysAgoShort": "{days}d ago",
+    "weeksAgo": "{weeks}w ago",
+    "monthsAgo": "{months}mo ago",
+    "yearsAgo": "{years}y ago"
+  },
+  "admin": {
+    "loginTitle": "Admin Login",
+    "tokenPlaceholder": "Admin Token",
+    "login": "Login",
+    "logout": "Logout",
+    "title": "Admin Dashboard",
+    "authError": "Authentication failed",
+    "tabs": {
+      "dashboard": "Dashboard",
+      "plugins": "Plugins",
+      "comments": "Comments"
+    },
+    "dashboard": {
+      "totalPlugins": "Total Plugins",
+      "totalVotes": "Total Votes",
+      "todayVotes": "Today's Votes",
+      "totalComments": "Total Comments",
+      "categoryBreakdown": "Plugins by Category",
+      "recentActivity": "Recent Activity",
+      "recentComments": "Comments in last 7 days: {count}",
+      "manualCollect": "Manual Collection",
+      "collectDesc": "Manually collect plugin information from GitHub. Normally runs daily automatically.",
+      "runCollect": "Run Collection",
+      "confirmCollect": "Run plugin collection?",
+      "collectSuccess": "Collection completed",
+      "collectError": "Collection failed"
+    },
+    "plugins": {
+      "addTitle": "Add Plugin",
+      "name": "Name",
+      "githubUrl": "GitHub URL",
+      "category": "Category",
+      "keywords": "Keywords (comma-separated)",
+      "tags": "Tags (comma-separated, e.g., file-system, web-api)",
+      "description": "Description",
+      "add": "Add",
+      "addError": "Failed to add plugin",
+      "selected": "{count} selected",
+      "bulkHide": "Bulk Hide",
+      "bulkShow": "Bulk Show",
+      "listTitle": "Plugins ({count})",
+      "selectAll": "Select All",
+      "deselectAll": "Deselect All",
+      "loading": "Loading...",
+      "hidden": "(Hidden)",
+      "edit": "Edit",
+      "show": "Show",
+      "hide": "Hide",
+      "delete": "Delete",
+      "confirmDelete": "Delete this plugin? Related votes and comments will also be deleted.",
+      "deleteError": "Failed to delete"
+    },
+    "comments": {
+      "searchPlaceholder": "Search comments...",
+      "allPlugins": "All Plugins",
+      "listTitle": "Comments ({count})",
+      "filteredTitle": "Comments ({filtered}/{total})",
+      "loading": "Loading...",
+      "empty": "No comments",
+      "fetchError": "Failed to fetch comments",
+      "hidden": "(Hidden)",
+      "show": "Show",
+      "hide": "Hide",
+      "delete": "Delete",
+      "confirmDelete": "Delete this comment?",
+      "deleteError": "Failed to delete"
+    },
+    "editModal": {
+      "title": "Edit Plugin",
+      "name": "Name",
+      "category": "Category",
+      "description": "Description",
+      "keywords": "Keywords (comma-separated)",
+      "tags": "Tags (comma-separated)",
+      "cancel": "Cancel",
+      "save": "Save"
+    }
+  },
+  "search": {
+    "placeholder": "Search plugins...",
+    "noResults": "No plugins found for \"{query}\"",
+    "resultsCount": "{count} plugins found",
+    "clear": "Clear search"
+  },
+  "howItWorks": {
+    "title": "How Rankings Work",
+    "subtitle": "Understanding Plugin Arena's scoring system",
+    "rankings": {
+      "title": "Three Ranking Types",
+      "now": {
+        "title": "Best Overall",
+        "desc": "Combines community votes (ELO) and GitHub popularity. The best plugins to use right now."
+      },
+      "trend": {
+        "title": "Rising Stars",
+        "desc": "Plugins gaining stars rapidly in the last 60 days. Catch the latest trends."
+      },
+      "classic": {
+        "title": "All-Time Favorites",
+        "desc": "Ranked by total GitHub stars. Time-tested, proven plugins."
+      }
+    },
+    "elo": {
+      "title": "ELO Rating System",
+      "desc": "Adapted from chess ratings, ELO measures each plugin's strength through pairwise voting.",
+      "initial": "Initial Score",
+      "kFactor": "K Factor",
+      "model": "Model",
+      "mechanism": "Beat a higher-rated plugin? Big gain. Lose to a lower-rated one? Big drop."
+    },
+    "voting": {
+      "title": "How Your Votes Matter",
+      "desc": "Every vote directly impacts the rankings.",
+      "step1": "Two plugins are shown side by side",
+      "step2": "Pick the one you would actually use",
+      "step3": "ELO scores update immediately based on the outcome"
+    },
+    "confidence": {
+      "title": "Confidence Levels",
+      "desc": "More votes = more reliable rankings.",
+      "high": "50+ votes. Ranking is stable and reliable.",
+      "medium": "10-49 votes. Getting there, more votes help.",
+      "low": "Under 10 votes. Early stage, may change significantly."
+    },
+    "cta": "Start Voting"
+  },
+  "common": {
+    "loading": "Loading"
+  }
+}

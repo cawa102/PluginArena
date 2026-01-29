@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "title": "Plugin Arena - Claude Code プラグインランキング",
+    "description": "Claude Code (MCP/skills/hooks/commands) の評価・ランキングサイト。コミュニティ投票で最高のプラグインを見つけよう。"
+  },
+  "nav": {
+    "ranking": "ランキング",
+    "vote": "投票",
+    "howItWorks": "仕組み"
+  },
+  "footer": {
+    "text": "Plugin Arena - Claude Codeエコシステムのためのコミュニティランキング"
+  },
+  "home": {
+    "title": "Claude Code プラグイン ランキング",
+    "subtitle1": "MCP / Skills / Hooks / Commands の評価・ランキング。",
+    "subtitle2": "コミュニティの投票で最高のプラグインを見つけよう。",
+    "cta": "投票に参加する"
+  },
+  "vote": {
+    "title": "プラグイン投票",
+    "description": "使ったことがあるプラグインを比較して、良い方に投票してください。あなたの投票がランキングに反映されます。",
+    "todayVotes": "今日の投票: {count}",
+    "whichBetter": "どちらが良いですか？",
+    "criteriaHint": "実際に使うならどちらを選びますか？",
+    "selected": "{name} を選択しました！",
+    "skip": "スキップ",
+    "bothUnknown": "両方知らない",
+    "skipKey": "[S]",
+    "keyLeft": "キー: 1 または ←",
+    "keyRight": "キー: 2 または →",
+    "note1": "同じペアへの投票は24時間に1回までです。",
+    "note2": "使ったことがないプラグインはスキップしてください。",
+    "keyboardHint": "キーボードショートカット: [1] または [←] で左を選択、[2] または [→] で右を選択、[S] でスキップ",
+    "loading": "読み込み中",
+    "preparing": "プラグインを準備中...",
+    "retry": "再試行",
+    "noPlugins": "投票可能なプラグインがありません",
+    "errorFetchPair": "投票ペアの取得に失敗しました",
+    "errorVote": "投票に失敗しました",
+    "voteFor": "{name}に投票",
+    "exitFocusMode": "チャレンジモードを終了"
+  },
+  "ranking": {
+    "tabs": {
+      "now": "総合",
+      "nowDesc": "ELO + Stars で総合評価",
+      "trend": "急上昇",
+      "trendDesc": "60日間の急上昇",
+      "classic": "定番",
+      "classicDesc": "累計 Stars 順"
+    },
+    "prev": "前へ",
+    "next": "次へ",
+    "errorFetch": "プラグインの取得に失敗しました",
+    "noPlugins": "プラグインが見つかりません"
+  },
+  "plugin": {
+    "rank": "ランク #{rank}位",
+    "score": "スコア",
+    "votes": "投票数",
+    "confidence": "信頼度: {level}",
+    "confidenceHigh": "高",
+    "confidenceMedium": "中",
+    "confidenceLow": "低",
+    "updated": "更新: {date}",
+    "openGithub": "{name}のGitHubリポジトリを開く",
+    "voteFor": "{name}に投票する",
+    "voteButton": "投票"
+  },
+  "category": {
+    "all": "すべて",
+    "filter": "カテゴリフィルター"
+  },
+  "comments": {
+    "button": "コメント",
+    "title": "コメント ({count})",
+    "close": "閉じる",
+    "loading": "読み込み中...",
+    "empty": "コメントはありません",
+    "placeholder": "コメントを追加...",
+    "submit": "投稿",
+    "errorFetch": "コメントの取得に失敗しました",
+    "errorPost": "コメントの投稿に失敗しました"
+  },
+  "time": {
+    "justNow": "たった今",
+    "minutesAgo": "{minutes}分前",
+    "hoursAgo": "{hours}時間前",
+    "daysAgo": "{days}日前",
+    "today": "今日",
+    "yesterday": "昨日",
+    "daysAgoShort": "{days}日前",
+    "weeksAgo": "{weeks}週間前",
+    "monthsAgo": "{months}ヶ月前",
+    "yearsAgo": "{years}年前"
+  },
+  "admin": {
+    "loginTitle": "管理者ログイン",
+    "tokenPlaceholder": "管理者トークン",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "title": "管理画面",
+    "authError": "認証に失敗しました",
+    "tabs": {
+      "dashboard": "ダッシュボード",
+      "plugins": "プラグイン管理",
+      "comments": "コメント管理"
+    },
+    "dashboard": {
+      "totalPlugins": "総プラグイン数",
+      "totalVotes": "総投票数",
+      "todayVotes": "今日の投票数",
+      "totalComments": "総コメント数",
+      "categoryBreakdown": "カテゴリ別プラグイン数",
+      "recentActivity": "最近のアクティビティ",
+      "recentComments": "過去7日間のコメント: {count}件",
+      "manualCollect": "手動収集",
+      "collectDesc": "GitHubからプラグイン情報を手動で収集します。通常は日次で自動実行されます。",
+      "runCollect": "収集を実行",
+      "confirmCollect": "プラグイン収集を実行しますか？",
+      "collectSuccess": "収集が完了しました",
+      "collectError": "収集に失敗しました"
+    },
+    "plugins": {
+      "addTitle": "プラグイン追加",
+      "name": "名前",
+      "githubUrl": "GitHub URL",
+      "category": "カテゴリ",
+      "keywords": "キーワード（カンマ区切り）",
+      "tags": "タグ（カンマ区切り、例: file-system, web-api）",
+      "description": "説明",
+      "add": "追加",
+      "addError": "プラグイン追加に失敗しました",
+      "selected": "{count}件選択中",
+      "bulkHide": "一括非表示",
+      "bulkShow": "一括表示",
+      "listTitle": "プラグイン一覧 ({count})",
+      "selectAll": "全選択",
+      "deselectAll": "全解除",
+      "loading": "読み込み中...",
+      "hidden": "(非表示)",
+      "edit": "編集",
+      "show": "表示",
+      "hide": "非表示",
+      "delete": "削除",
+      "confirmDelete": "このプラグインを削除しますか？関連する投票とコメントも削除されます。",
+      "deleteError": "削除に失敗しました"
+    },
+    "comments": {
+      "searchPlaceholder": "コメント検索...",
+      "allPlugins": "全てのプラグイン",
+      "listTitle": "コメント一覧 ({count})",
+      "filteredTitle": "コメント一覧 ({filtered}/{total})",
+      "loading": "読み込み中...",
+      "empty": "コメントはありません",
+      "fetchError": "コメント取得に失敗しました",
+      "hidden": "(非表示)",
+      "show": "表示",
+      "hide": "非表示",
+      "delete": "削除",
+      "confirmDelete": "このコメントを削除しますか？",
+      "deleteError": "削除に失敗しました"
+    },
+    "editModal": {
+      "title": "プラグイン編集",
+      "name": "名前",
+      "category": "カテゴリ",
+      "description": "説明",
+      "keywords": "キーワード（カンマ区切り）",
+      "tags": "タグ（カンマ区切り）",
+      "cancel": "キャンセル",
+      "save": "保存"
+    }
+  },
+  "search": {
+    "placeholder": "プラグインを検索...",
+    "noResults": "「{query}」に一致するプラグインが見つかりません",
+    "resultsCount": "{count}件のプラグインが見つかりました",
+    "clear": "検索をクリア"
+  },
+  "howItWorks": {
+    "title": "ランキングの仕組み",
+    "subtitle": "Plugin Arenaのスコアリングシステムを解説します",
+    "rankings": {
+      "title": "3つのランキング",
+      "now": {
+        "title": "総合評価",
+        "desc": "コミュニティ投票（ELO）とGitHub人気度を組み合わせた総合評価。今すぐ導入すべきプラグインがわかります。"
+      },
+      "trend": {
+        "title": "急上昇",
+        "desc": "直近60日間でスターが急増しているプラグイン。最新トレンドをキャッチできます。"
+      },
+      "classic": {
+        "title": "定番",
+        "desc": "累計スター数でランキング。長期的に支持されている実績あるプラグインです。"
+      }
+    },
+    "elo": {
+      "title": "ELOレーティングとは",
+      "desc": "チェスのレーティングシステムを応用。ペアワイズ投票の結果から各プラグインの強さを算出します。",
+      "initial": "初期スコア",
+      "kFactor": "K係数",
+      "model": "モデル",
+      "mechanism": "格上に勝つと大きくスコアアップ、格下に負けると大きくダウンします。"
+    },
+    "voting": {
+      "title": "投票の影響",
+      "desc": "あなたの1票がランキングに直接反映されます。",
+      "step1": "2つのプラグインが並べて表示されます",
+      "step2": "実際に使うならどちらか選んでください",
+      "step3": "投票結果に基づいてELOスコアが即座に更新されます"
+    },
+    "confidence": {
+      "title": "信頼度レベル",
+      "desc": "投票数が多いほど、ランキングの信頼性が高まります。",
+      "high": "50票以上。ランキングは安定しています。",
+      "medium": "10〜49票。まだ変動の可能性があります。",
+      "low": "10票未満。初期段階で大きく変わる可能性があります。"
+    },
+    "cta": "投票に参加する"
+  },
+  "common": {
+    "loading": "読み込み中"
+  }
+}
