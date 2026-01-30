@@ -6,6 +6,10 @@
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E)](https://supabase.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000)](https://vercel.com/)
 
+<p align="center">
+  <img src="assets/top.png" alt="Plugin Arena Screenshot" width="800">
+</p>
+
 <div align="center">
 
 ### Discover the best Claude Code extensions through community-driven rankings.
