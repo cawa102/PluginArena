@@ -262,7 +262,7 @@ export default function VoteComparison({ category, focusPluginId, onVoteComplete
               {plugin.name}
             </h3>
             {plugin.description && (
-              <p className="text-[#94A3B8] text-xs line-clamp-3 leading-relaxed">
+              <p className="text-[#94A3B8] text-sm line-clamp-3 leading-relaxed font-arcade">
                 {plugin.description}
               </p>
             )}
@@ -319,7 +319,7 @@ export default function VoteComparison({ category, focusPluginId, onVoteComplete
   };
 
   return (
-    <div className={`space-y-8 transition-all duration-400 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
+    <div className={`space-y-8 transition-all duration-400 font-arcade ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
       {/* VS display */}
       <div className="relative flex items-center justify-center gap-8">
         {renderPluginCard(pair.pluginA, pair.pluginB, 'left')}

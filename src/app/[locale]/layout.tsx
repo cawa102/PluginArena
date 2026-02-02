@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Nunito, M_PLUS_Rounded_1c, JetBrains_Mono, Press_Start_2P } from 'next/font/google';
+import { Nunito, M_PLUS_Rounded_1c, JetBrains_Mono, Press_Start_2P, VT323 } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import '../globals.css';
 import LocaleLayoutClient from './layout-client';
@@ -30,6 +30,13 @@ const jetbrainsMono = JetBrains_Mono({
 // Pixel font for gaming aesthetic
 const pressStart2P = Press_Start_2P({
   variable: '--font-pixel',
+  subsets: ['latin'],
+  weight: ['400'],
+});
+
+// Arcade terminal font
+const vt323 = VT323({
+  variable: '--font-arcade',
   subsets: ['latin'],
   weight: ['400'],
 });
@@ -76,7 +83,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${nunito.variable} ${mplusRounded.variable} ${jetbrainsMono.variable} ${pressStart2P.variable} antialiased min-h-screen`}
+        className={`${nunito.variable} ${mplusRounded.variable} ${jetbrainsMono.variable} ${pressStart2P.variable} ${vt323.variable} antialiased min-h-screen`}
       >
         <NextIntlClientProvider messages={messages}>
           <LocaleLayoutClient locale={locale}>{children}</LocaleLayoutClient>

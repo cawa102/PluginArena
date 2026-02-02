@@ -20,7 +20,7 @@ function VoteSidebar({ locale }: { locale: string }) {
   };
 
   return (
-    <aside className="w-[280px] min-h-screen bg-[#0F172A] border-r border-[#1E293B] p-6 flex flex-col gap-8 shrink-0">
+    <aside className="w-[280px] min-h-screen bg-[#0F172A] border-r border-[#1E293B] p-6 flex flex-col gap-8 shrink-0 font-arcade">
       {/* Logo */}
       <div className="flex items-center gap-3">
         <div className="w-11 h-11 rounded-[10px] bg-gradient-to-br from-[#22D3EE] to-[#8B5CF6] flex items-center justify-center">
@@ -116,7 +116,7 @@ function VotePageContent() {
   };
 
   return (
-    <div className="flex min-h-screen bg-[#0A0F1C]">
+    <div className="flex min-h-screen bg-[#0A0F1C] font-arcade">
       {/* Sidebar - Hidden on mobile */}
       <div className="hidden lg:block">
         <VoteSidebar locale={locale} />

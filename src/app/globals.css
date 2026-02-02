@@ -139,6 +139,11 @@ body::before {
   font-family: var(--font-pixel), monospace;
 }
 
+/* Arcade terminal font utility class */
+.font-arcade {
+  font-family: var(--font-arcade), monospace;
+}
+
 /* ========== Button Styles ========== */
 .btn-primary {
   background: var(--primary);
