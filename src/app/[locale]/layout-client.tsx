@@ -23,6 +23,12 @@ export default function LocaleLayoutClient({
     return pathname.startsWith(path);
   };
 
+  // Vote page has its own layout with sidebar
+  const isVotePage = pathname.includes('/vote');
+  if (isVotePage) {
+    return <>{children}</>;
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header with glassmorphism effect */}
