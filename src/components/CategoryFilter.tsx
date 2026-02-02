@@ -12,14 +12,10 @@ interface CategoryOption {
   value: PluginCategory | null;
   labelKey: string;
   icon: React.ReactNode;
-  color: {
-    active: string;
-    inactive: string;
-    iconBg: string;
-  };
+  color: string;
+  activeColor: string;
 }
 
-// SVG icons for each category
 const icons = {
   all: (
     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -48,57 +44,41 @@ const icons = {
   ),
 };
 
-// Using pastel category colors from the ゆるい design system
 const categories: CategoryOption[] = [
   {
     value: null,
     labelKey: 'all',
     icon: icons.all,
-    color: {
-      active: 'bg-[var(--primary)] text-[var(--foreground)] shadow-md',
-      inactive: 'bg-[var(--card)] text-[var(--foreground)] hover:bg-[var(--secondary)]',
-      iconBg: 'bg-[var(--primary-light)]',
-    },
+    color: '#94A3B8',
+    activeColor: '#22D3EE',
   },
   {
     value: 'mcp',
     labelKey: 'MCP',
     icon: icons.mcp,
-    color: {
-      active: 'bg-[var(--category-mcp)] text-[#4A90A4] shadow-md',
-      inactive: 'category-mcp hover:scale-102',
-      iconBg: 'bg-[var(--category-mcp)]/30',
-    },
+    color: '#22D3EE',
+    activeColor: '#22D3EE',
   },
   {
     value: 'skill',
     labelKey: 'Skills',
     icon: icons.skill,
-    color: {
-      active: 'bg-[var(--category-skill)] text-[#8B6B9C] shadow-md',
-      inactive: 'category-skill hover:scale-102',
-      iconBg: 'bg-[var(--category-skill)]/30',
-    },
+    color: '#8B5CF6',
+    activeColor: '#8B5CF6',
   },
   {
     value: 'hook',
     labelKey: 'Hooks',
     icon: icons.hook,
-    color: {
-      active: 'bg-[var(--category-hook)] text-[#C48B6A] shadow-md',
-      inactive: 'category-hook hover:scale-102',
-      iconBg: 'bg-[var(--category-hook)]/30',
-    },
+    color: '#F97316',
+    activeColor: '#F97316',
   },
   {
     value: 'command',
     labelKey: 'Commands',
     icon: icons.command,
-    color: {
-      active: 'bg-[var(--category-command)] text-[#5A9A82] shadow-md',
-      inactive: 'category-command hover:scale-102',
-      iconBg: 'bg-[var(--category-command)]/30',
-    },
+    color: '#10B981',
+    activeColor: '#10B981',
   },
 ];
 
@@ -107,7 +87,7 @@ export default function CategoryFilter({ selected, onChange }: CategoryFilterPro
 
   return (
     <div
-      className="inline-flex flex-wrap justify-center gap-2 p-2.5 bg-[var(--card)]/80 rounded-full border border-[var(--border)] shadow-sm"
+      className="inline-flex flex-wrap justify-center gap-2 p-2.5 bg-[#1E293B]/80 rounded-full border border-[#334155]"
       role="group"
       aria-label={t('filter')}
     >
@@ -120,18 +100,20 @@ export default function CategoryFilter({ selected, onChange }: CategoryFilterPro
             key={cat.value ?? 'all'}
             onClick={() => onChange(cat.value)}
             aria-pressed={isSelected}
-            className={`category-filter-btn relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-2 border ${
+            className={`category-filter-btn relative px-4 py-2 rounded-full text-xs font-pixel transition-all duration-200 flex items-center gap-2 border ${
               isSelected
-                ? `${cat.color.active} scale-105 border-transparent`
-                : `${cat.color.inactive} border-transparent hover:border-[var(--border)]`
+                ? 'border-transparent shadow-lg'
+                : 'border-transparent hover:bg-[#0F172A]'
             }`}
+            style={{
+              backgroundColor: isSelected ? `${cat.activeColor}20` : 'transparent',
+              color: isSelected ? cat.activeColor : cat.color,
+              boxShadow: isSelected ? `0 0 20px ${cat.activeColor}30` : 'none',
+            }}
           >
-            {/* Icon */}
             <span className={`flex-shrink-0 transition-transform ${isSelected ? 'scale-110' : ''}`}>
               {cat.icon}
             </span>
-
-            {/* Label */}
             <span>{label}</span>
           </button>
         );

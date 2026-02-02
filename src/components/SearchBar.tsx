@@ -21,12 +21,10 @@ export default function SearchBar({
   const inputRef = useRef<HTMLInputElement>(null);
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Sync external value changes
   useEffect(() => {
     setLocalValue(value);
   }, [value]);
 
-  // Debounced onChange
   const debouncedOnChange = useCallback(
     (newValue: string) => {
       if (debounceTimerRef.current) {
@@ -39,24 +37,20 @@ export default function SearchBar({
     [onChange, debounceMs]
   );
 
-  // Handle input change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
     setLocalValue(newValue);
     debouncedOnChange(newValue);
   };
 
-  // Clear search
   const handleClear = () => {
     setLocalValue('');
     onChange('');
     inputRef.current?.focus();
   };
 
-  // Keyboard shortcut: / or Cmd+K to focus
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Ignore if typing in an input/textarea
       if (
         e.target instanceof HTMLInputElement ||
         e.target instanceof HTMLTextAreaElement
@@ -64,13 +58,11 @@ export default function SearchBar({
         return;
       }
 
-      // / key to focus search
       if (e.key === '/') {
         e.preventDefault();
         inputRef.current?.focus();
       }
 
-      // Cmd+K or Ctrl+K to focus search
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
         inputRef.current?.focus();
@@ -81,7 +73,6 @@ export default function SearchBar({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Cleanup debounce timer on unmount
   useEffect(() => {
     return () => {
       if (debounceTimerRef.current) {
@@ -94,7 +85,7 @@ export default function SearchBar({
     <div className="relative">
       {/* Search icon */}
       <svg
-        className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--muted)]"
+        className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#64748B]"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -114,7 +105,7 @@ export default function SearchBar({
         value={localValue}
         onChange={handleChange}
         placeholder={placeholder || t('placeholder')}
-        className="w-full pl-10 pr-20 py-3 border border-[var(--border)] rounded-xl bg-[var(--background)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all"
+        className="w-full pl-10 pr-20 py-3 border border-[#334155] rounded-xl bg-[#1E293B] text-white placeholder-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#22D3EE] focus:border-transparent transition-all"
         aria-label={t('placeholder')}
       />
 
@@ -123,11 +114,11 @@ export default function SearchBar({
         {localValue ? (
           <button
             onClick={handleClear}
-            className="p-1 hover:bg-[var(--secondary)] rounded-md transition-colors"
+            className="p-1 hover:bg-[#0F172A] rounded-md transition-colors"
             aria-label={t('clear')}
           >
             <svg
-              className="w-5 h-5 text-[var(--muted)]"
+              className="w-5 h-5 text-[#64748B] hover:text-[#22D3EE]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -141,7 +132,7 @@ export default function SearchBar({
             </svg>
           </button>
         ) : (
-          <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-1 text-xs text-[var(--muted)] bg-[var(--secondary)] rounded border border-[var(--border)]">
+          <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-1 text-xs text-[#64748B] bg-[#0F172A] rounded border border-[#334155] font-pixel">
             <span>/</span>
           </kbd>
         )}

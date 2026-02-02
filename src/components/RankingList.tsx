@@ -109,7 +109,7 @@ export default function RankingList({ onVoteClick }: RankingListProps) {
 
       {/* Search results count */}
       {searchQuery && !loading && (
-        <div className="text-sm text-[var(--muted)]">
+        <div className="text-sm text-[#64748B]">
           {filteredPlugins.length > 0
             ? tSearch('resultsCount', { count: filteredPlugins.length })
             : tSearch('noResults', { query: searchQuery })}
@@ -119,13 +119,13 @@ export default function RankingList({ onVoteClick }: RankingListProps) {
       {/* Loading */}
       {loading && (
         <div className="flex justify-center py-12">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--primary)]"></div>
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#22D3EE]"></div>
         </div>
       )}
 
       {/* Error */}
       {error && (
-        <div className="text-center py-12 text-red-500">
+        <div className="text-center py-12 text-[#EF4444]">
           <p>{error}</p>
         </div>
       )}
@@ -134,7 +134,7 @@ export default function RankingList({ onVoteClick }: RankingListProps) {
       {!loading && !error && (
         <>
           {filteredPlugins.length === 0 ? (
-            <div className="text-center py-12 text-[var(--muted)]">
+            <div className="text-center py-12 text-[#64748B]">
               <p>{searchQuery ? tSearch('noResults', { query: searchQuery }) : t('noPlugins')}</p>
             </div>
           ) : (
@@ -155,17 +155,17 @@ export default function RankingList({ onVoteClick }: RankingListProps) {
               <button
                 onClick={() => setPage((p) => Math.max(1, p - 1))}
                 disabled={page === 1}
-                className="px-4 py-2 border border-[var(--border)] rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[var(--secondary)] transition-colors"
+                className="px-4 py-2 border border-[#334155] rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#1E293B] hover:border-[#22D3EE]/40 transition-colors text-[#94A3B8] hover:text-[#22D3EE] font-pixel text-xs"
               >
                 {t('prev')}
               </button>
-              <span className="px-4 py-2 text-[var(--muted)]">
+              <span className="px-4 py-2 text-[#64748B] font-pixel text-xs">
                 {page} / {totalPages}
               </span>
               <button
                 onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                 disabled={page === totalPages}
-                className="px-4 py-2 border border-[var(--border)] rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[var(--secondary)] transition-colors"
+                className="px-4 py-2 border border-[#334155] rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#1E293B] hover:border-[#22D3EE]/40 transition-colors text-[#94A3B8] hover:text-[#22D3EE] font-pixel text-xs"
               >
                 {t('next')}
               </button>
